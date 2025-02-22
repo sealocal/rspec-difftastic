@@ -5,10 +5,19 @@ Gem::Specification.new do |s|
   s.description = "This is a quick patch implementation and may not cover edge cases. To reduce disruptions and maximize usefulness, difftastic is only applied when RSpec diffs strings."
   s.authors     = ["Mike Taylor"]
   s.email       = "github@miket.dev"
-  s.homepage    = "https://rubygems.org/gems/rspec-difftastic"
+  s.homepage    = "https://github.com/sealocal/rspec-difftastic"
   s.license     = "MIT"
 
-  s.files       = ["lib/rspec-difftastic.rb"]
+  spec.metadata = {
+		homepage_uri: spec.homepage,
+		changelog_uri: "https://github.com/sealocal/rspec-difftastic/releases",
+	}
+
+	spec.files = Dir[
+		"lib/**/*",
+		"LICENSE",
+	]
+
   s.add_runtime_dependency "difftastic", "~> 0.6.0"
 
   s.add_development_dependency "rspec", "~> 3.0"
