@@ -16,6 +16,11 @@ module RSpec
         "\n\n#{diff_string}\n"
       end
 
+      def diff_as_object(actual, expected)
+         diff_string = DIFFTASTIC_DIFFER.diff_objects(actual, expected)
+        "\n\n#{diff_string}\n"
+      end
+
     end
   end
 end
