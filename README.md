@@ -39,6 +39,53 @@ Red and green is side-by-side.  Word-level diff to highlight that the last name 
 
 <img width="1354" alt="rspec-difftastic" src="https://github.com/user-attachments/assets/8137fd10-40d8-4c52-bbab-9aa2997b8210" />
 
+
+## Matchers
+
+Here are two example that use matchers for comparison.
+
+```ruby
+    it do
+      expect(
+        unknown: 'any value is acceptable',
+        number: 1,
+      ).to match(
+        unknown: anything,
+        number: '1',
+      )
+    end
+
+    it do
+      expect(
+        nested_hash: { some_key: :some_value },
+        number: 1,
+      ).to match(
+        nested_hash: hash_including(:some_key),
+        number: '1',
+      )
+    end
+```
+
+### RSpec (default differ)
+
+The lack of emphasis on the problem (`"1"` vs `1`) may have some developers wondering if they're incorrectly using matchers. 
+
+<img width="1377" alt="rspec-diff-matchers" src="https://github.com/user-attachments/assets/2ca0196e-bda6-49b3-a89d-e0325d80f2e2" />
+
+### RSpec with super_diff
+
+In the first diff, `super_diff` arguably makes the diff worse by outputting the matcher's class name.
+In the second diff, the matcher is cleanly left out of the diff.
+
+<img width="1361" alt="rspec-super-diff-matchers" src="https://github.com/user-attachments/assets/dfe5d23c-14ff-46d0-b7fa-5357a97e5814" />
+
+### RSpec with difftastic
+
+In the first diff `rspec-difftastic` only diffs strings, so the matcher method name is shown, but can leadt to being a distracting red herring especially if the reader is accustomed to relying on the +/- notation of RSpec diffs.
+
+<img width="1380" alt="rspec-difftastic-matchers" src="https://github.com/user-attachments/assets/1858f2ba-1c47-427c-8086-c7bb3b41da1e" />
+
+
 ## Development & Contributing
 
 Install the development dependencies:
