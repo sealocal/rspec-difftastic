@@ -40,4 +40,23 @@ RSpec.shared_examples 'Example Failing Specs' do
     )
   end
 
+  it do
+    expect(
+      unknown: 'any value is acceptable',
+      number: 1,
+    ).to match(
+      unknown: anything,
+      number: '1',
+    )
+  end
+
+  it do
+    expect(
+      nested_hash: { some_key: :some_value },
+      number: 1,
+    ).to match(
+      nested_hash: hash_including(:some_key),
+      number: '1',
+    )
+  end
 end
