@@ -2,8 +2,7 @@
 
 This gem allows you to use [difftastic-ruby](https://github.com/joeldrapper/difftastic-ruby) in place of RSpec's default differ.
 
-This is a quick patch implementation and may not cover edge cases. To reduce disruptions and maximize usefulness, difftastic is only applied when RSpec diffs strings.
-
+This is a quick patch implementation and may not cover edge cases.
 
 ## Motivation
 
@@ -81,9 +80,9 @@ In the second diff, the matcher is cleanly left out of the diff.
 
 ### RSpec with difftastic
 
-In the first diff `rspec-difftastic` only diffs strings, so the matcher method name is shown, but can leadt to being a distracting red herring especially if the reader is accustomed to relying on the +/- notation of RSpec diffs.
+In the first diff `rspec-difftastic` diff strings and objects, so the matcher class name is shown, and can lead to being a distracting red herring especially if the reader is accustomed to relying on the +/- notation of RSpec diffs.
 
-<img width="1380" alt="rspec-difftastic-matchers" src="https://github.com/user-attachments/assets/1858f2ba-1c47-427c-8086-c7bb3b41da1e" />
+<img width="1375" alt="rspec-difftastic-with-matchers" src="https://github.com/user-attachments/assets/8bca97c9-eb1d-4e9b-a3da-7cc028cfd862" />
 
 
 ## Development & Contributing
