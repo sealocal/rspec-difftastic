@@ -23,4 +23,24 @@ RSpec.describe RSpec::Support::Differ do
       end
     end
   end
+
+  describe '#diff_as_object' do
+    context 'when actual and expected are the same' do
+      it 'returns an empty diff' do
+        actual = { a: 1, b: 2 }
+        expected = { a: 1, b: 2 }
+        diff = differ.diff_as_object(actual, expected)
+        expect(diff).to include('No changes.')
+      end
+    end
+
+    context 'when actual and expected are different' do
+      it 'returns the diff between the strings' do
+        actual = { a: 1, b: 2 }
+        expected = { a: 1, b: 3 }
+        diff = differ.diff_as_object(actual, expected)
+        expect(diff).to include('Expected', 'Actual')
+      end
+    end
+  end
 end
