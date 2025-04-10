@@ -20,7 +20,7 @@ Integrating [difftastic-ruby](https://github.com/joeldrapper/difftastic-ruby) wi
 
 So much red to scan.
 
-<img width="1351" alt="rspec-diff" src="https://github.com/user-attachments/assets/43780599-0e0c-49a1-bdde-1eb8e988a116" />
+<img width="1354" alt="rspec-difftastic" src="https://github.com/user-attachments/assets/8137fd10-40d8-4c52-bbab-9aa2997b8210" />
 
 ### RSpec with super_diff
 
@@ -36,7 +36,8 @@ Red is replaced with white, magenta, and yellow - easily readible!
 
 Red and green is side-by-side.  Word-level diff to highlight that the last name is different.
 
-<img width="1354" alt="rspec-difftastic" src="https://github.com/user-attachments/assets/8137fd10-40d8-4c52-bbab-9aa2997b8210" />
+
+<img width="1351" alt="rspec-diff" src="https://github.com/user-attachments/assets/43780599-0e0c-49a1-bdde-1eb8e988a116" />
 
 
 ## Matchers
